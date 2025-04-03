@@ -9,11 +9,12 @@ jobs:
   my_testing:
     runs-on: ubuntu-latest
     steps:
-    - name: Print Hello Message
+    - name: Print Hello Message in Testing
       run : echo "Hello World from Testing Job"
 
   my_deploy:
     runs-on: ubuntu-latest
+    needs: [my_testing]
     steps:
-    - name: Print Hello Message
+    - name: Print Hello Message in Delpoy
       run : echo "Hello World from Deploy Job"
