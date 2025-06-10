@@ -11,7 +11,7 @@ on:
 
 jobs:
   my_testing:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - name: Print Hello Message in Testing
       run : echo "Hello World from Testing Job"
@@ -22,7 +22,9 @@ jobs:
         echo "Hello Message2"
         echo "Application name ${{ env.APPLICATION_NAME }}"
     - name: List surrent folder
-      run : ls -la
+      run : 
+        ls -la
+        uname -a
 
     - name: Git clone my repo
       uses : actions/checkout@v1
