@@ -24,7 +24,6 @@ jobs:
     - name: List surrent folder
       run : 
         ls -la
-        ls
       
     - name: Git clone my repo
       uses : actions/checkout@v1
